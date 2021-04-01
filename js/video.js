@@ -38,15 +38,26 @@ document.querySelector("#slider").addEventListener("click",function() {
 
 document.querySelector("#slower").addEventListener("click", function(){
 	console.log("Slow Down");
-	video.playbackRate *= 0.9;
+	video.playbackRate *= 0.95;
 	console.log(video.playbackRate);
 });
 
 document.querySelector("#faster").addEventListener("click", function(){
 	console.log("GO FASTER");
-	video.playbackRate *= 0.9;
+	video.playbackRate /= 0.95;
 	console.log(video.playbackRate);
 });
+
+document.querySelector("#skip").addEventListener("click", function(){
+	console.log("skip ahead");
+	if (video.currentTime > video.duration - 15){
+		video.currentTime = 0;
+	}
+	else{
+		video.currentTime(video.currentTime() + 15);
+	}
+});
+
 
 document.querySelector("#vintage").addEventListener("click", function(){
 	console.log("Old School");
