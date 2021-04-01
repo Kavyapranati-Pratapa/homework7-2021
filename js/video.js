@@ -54,7 +54,7 @@ document.querySelector("#skip").addEventListener("click", function(){
 		video.currentTime = 0;
 	}
 	else{
-		video.currentTime(video.currentTime() + 15);
+		video.currentTime(video.currentTime + 15);
 	}
 });
 
