@@ -37,15 +37,23 @@ document.querySelector("#slider").addEventListener("click",function() {
  });
 
 document.querySelector("#slower").addEventListener("click", function(){
-	video.playbackRate = playbackSpeed;
-	document.getElementById("volume").innerHTML = (playbackSpeed * 100) - 5 + "%";
-	console.log((playbackSpeed * 100) - 5 + "%");
+	console.log("Slow Down");
+	video.playbackRate *= 0.9;
+	console.log(video.playbackRate);
+});
+
+document.querySelector("#faster").addEventListener("click", function(){
+	console.log("GO FASTER");
+	video.playbackRate *= 0.9;
+	console.log(video.playbackRate);
 });
 
 document.querySelector("#vintage").addEventListener("click", function(){
-	document.getElementById("#player1").classList.add(".oldSchool");
+	console.log("Old School");
+	video.classList.add(".oldSchool");
 });
 
 document.querySelector("#orig").addEventListener("click", function(){
-	document.getElementById("#player1").classList.remove(".oldSchool");
+	console.log("Back to Normal")
+	video.classList.remove(".oldSchool");
 });
