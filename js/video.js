@@ -43,9 +43,9 @@ document.querySelector("#slower").addEventListener("click", function(){
 });
 
 document.querySelector("#vintage").addEventListener("click", function(){
-	document.getElementById("v.video").classList.add(".oldSchool");
+	document.getElementById("#player1").classList.add(".oldSchool");
 });
 
 document.querySelector("#orig").addEventListener("click", function(){
-	document.getElementById(".video").classList.remove(".oldSchool");
+	document.getElementById("#player1").classList.remove(".oldSchool");
 });
