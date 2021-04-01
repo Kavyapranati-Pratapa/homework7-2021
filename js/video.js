@@ -50,15 +50,14 @@ document.querySelector("#faster").addEventListener("click", function(){
 
 document.querySelector("#skip").addEventListener("click", function(){
 	console.log("skip ahead");
-	if (video.currentTime > video.duration - 15){
-		video.currentTime = 0;
+	if (video.currentTime < video.duration - 15){
+		video.currentTime += 15;
 	}
 	else{
-		video.currentTime = video.currentTime + 15;
+		video.currentTime = 0;
 	}
 
 	console.log(video.currentTime);
-	video.play();
 });
 
 
